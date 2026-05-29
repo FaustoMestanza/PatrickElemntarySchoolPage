@@ -1,0 +1,2509 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('./Imagenes/FONDOBANER.jpg'); /* Cambia 'background.jpg' por la ruta de tu imagen de fondo */
+    background-size: cover; /* Ajusta el tamaño de la imagen al fondo del body */
+    background-position: center; /* Centra la imagen horizontal y verticalmente */
+}
+
+header {
+    background-color: #FFA500; /* Naranja suave */
+    padding: 20px 10px; /* Aumenté el padding para más espacio */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#logo {
+    max-width: 130px; /* Ajusta el tamaño según tu necesidad */
+}
+
+#slogan,
+#subSlogan {
+    font-size: 40px; /* Tamaño del texto del eslogan y subeslogan */
+    color: #a45001; /* Color del texto */
+    margin: 10px 0; /* Espacio entre las frases y el logo */
+
+    font-family: 'Raleway', sans-serif;
+}
+
+#subSlogan {
+    color: #004080; /* Color del subeslogan */
+    font-size: 25px; /* Tamaño del texto del eslogan y subeslogan */
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Dancing Script', cursive;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #FFF; /* Texto blanco */
+    padding: 10px 20px;
+    display: inline-block;
+    transition: all 0.3s ease; /* Agregado para suavizar la transición */
+    font-size: 22px; /* Tamaño del texto de las pestañas */
+}
+
+nav a:hover {
+    background-color: #FFF; /* Fondo blanco al pasar el ratón */
+    color: #FFA500; /* Texto naranja al pasar el ratón */
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el ratón */
+}
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FFF; /* Fondo blanco */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Sombra */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.dropdown-content a {
+    color: #000; /* Texto negro */
+    padding: 10px 20px;
+    display: block;
+    text-decoration: none;
+    transition: all 0.3s ease; /* Agregado para suavizar la transición */
+    font-size: 16px; /* Tamaño del texto del submenú */
+}
+
+.dropdown-content a:hover {
+    background-color: #FFA500; /* Fondo naranja al pasar el ratón */
+    color: #FFF; /* Texto blanco al pasar el ratón */
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el ratón */
+}
+
+.dropdown-content ul {
+    list-style-type: none; /* Quita las viñetas de la lista desordenada */
+}
+
+#noticias, #contacto {
+    background-color: #FFA500;
+}
+
+#noticias:hover, #contacto:hover {
+    background-color: #FFF;
+    color: #FFA500;
+    transform: scale(1.1);
+}
+
+main {
+    width: 100%;
+    overflow: hidden;
+}
+
+
+
+#banner {
+    width: 50%;
+    margin-top: 10;
+    margin: 0 auto; /* Agregado para centrar horizontalmente */
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center; /* Centra el contenido del banner */
+
+    
+   
+}
+
+.banner-img {
+    margin-top: 10;
+    max-width: 100%; /* Ajusta el tamaño máximo al 100% */
+    height: auto;
+    display: inline-block;
+    vertical-align: middle; /* Centra verticalmente */
+}
+
+.dropdown-content li {
+    list-style: none; /* Quita las viñetas de los elementos li dentro de dropdown-content */
+}
+
+
+#quienes-somos {
+    padding: 40px; /* Espaciado interno */
+    text-align: center;
+}
+
+.quienes-somos-article {
+    display: flex; /* Utiliza flexbox para distribuir las columnas */
+    max-width: 1200px; /* Ancho máximo para los artículos */
+    margin: 0 auto 30px; /* Centrar horizontalmente y agregar margen inferior */
+    padding: 20px; /* Espaciado interno */
+    border: 1px solid #ddd; /* Borde para separar los artículos */
+    background-image: url('./Imagenes/fondoBanner1\ \(2\).jpg'); /* Ruta de tu imagen de fondo */
+    background-size: cover; /* Ajusta el tamaño de la imagen al fondo del article */
+    background-position: center; /* Centra la imagen horizontal y verticalmente */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra para efecto tridimensional */
+    transition: transform 0.3s ease-in-out; /* Agregado para suavizar la transición al pasar el ratón */
+}
+
+.quienes-somos-article:hover {
+    transform: scale(1.05); /* Efecto de aumento al pasar el ratón */
+}
+
+.column {
+    flex: 1; /* Cada columna ocupa la misma cantidad de espacio */
+    padding: 0 10px; /* Agrega espacio entre las columnas */
+    text-align: center; /* Centra el contenido horizontalmente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
+}
+
+.quienes-somos-article h2 {
+    color: #a45001; /* Color del título */
+    font-size: 24px; /* Tamaño del título */
+}
+
+.quienes-somos-article p {
+    color: #000; /* Color del texto */
+    font-size: 16px; /* Tamaño del texto */
+}
+
+.article-img {
+    max-width: 100%; /* Ajusta el tamaño máximo de la imagen al 100% del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-top: 10px; /* Agrega margen superior a la imagen */
+}
+
+footer {
+    background-color: #FFA500; /* Color similar al encabezado */
+    padding: 20px;
+    text-align: center;
+    
+    display: flex;
+    justify-content: space-around; /* Espaciado uniforme entre las secciones */
+}
+
+/* Estilo para las secciones de redes sociales y ubicación */
+.redes-sociales,
+.ubicacion {
+    flex: 1;
+    max-width: 300px; /* Ancho máximo para cada sección */
+    
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Transición de color al pasar el ratón */
+}
+
+.redes-sociales:hover,
+.ubicacion:hover {
+    background-color: #FFD700; /* Color al pasar el ratón */
+}
+
+.redes-sociales h3,
+.ubicacion h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.redes-sociales ul {
+    list-style: none;
+    padding: 0;
+}
+
+.redes-sociales li {
+    margin-bottom: 10px;
+}
+
+.redes-sociales a,
+.ubicacion a {
+    text-decoration: none;
+    
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.redes-sociales a:hover,
+.ubicacion a:hover {
+    background-color: #FFF; /* Color al pasar el ratón */
+    color: #FFA500; /* Texto al pasar el ratón */
+}
+
+/* Nueva sección de contacto */
+.contacto {
+    flex: 1;
+    max-width: 300px; /* Ancho máximo para la sección de contacto */
+
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Transición de color al pasar el ratón */
+}
+
+.contacto:hover {
+    background-color: #FFD700; /* Color al pasar el ratón */
+}
+
+.contacto h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.contacto ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contacto li {
+    margin-bottom: 10px;
+}
+
+.contacto a {
+    text-decoration: none;
+    
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.contacto a:hover {
+    background-color: #FFF; /* Color al pasar el ratón */
+    color: #FFA500; /* Texto al pasar el ratón */
+}
+
+#main-pagina2 {
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    gap: 30px;
+    max-width: 1200px; /* Ancho máximo para mantener el contenido centrado */
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+    margin-top: 30px;
+}
+
+#main-title {
+    margin-top: 40px;
+    
+    font-size: 36px; /* Tamaño del título */
+    color: #004080; /* Color del texto del título */
+    margin-bottom: 30px; /* Espacio entre el título y los artículos */
+    text-align: center; /* Centra el texto en el main */
+}
+
+.modern-article {
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    text-align: center; /* Centra el contenido */
+}
+
+.modern-article:hover {
+    transform: scale(1.05);
+}
+
+.modern-article h2 {
+    color: #004080;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.modern-article img {
+    max-width: 100%;
+    height: auto;
+}
+
+.modern-article p {
+    color: #000;
+    font-size: 14px;
+}
+
+/* Artículos con clase image-only (primeros tres artículos) */
+.image-only {
+    background-color: #FFF; /* Cambia al color que desees para el fondo */
+    padding: 0; /* Elimina el relleno para que la imagen ocupe todo el artículo */
+    text-align: center; /* Centra el contenido */
+   
+}
+
+.image-only img,
+.text-and-image img {
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    height: 400px; /* Establece la altura deseada para todas las imágenes */
+    object-fit: cover; /* Mantiene la proporción y corta la imagen si es necesario */
+    border-radius: 10px; /* Añade esquinas redondeadas */
+}
+
+.text-and-image {
+    background-color: #FFF;
+    padding: 20px; /* Ajusta el padding según tus preferencias */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+
+.text-and-image img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.text-and-image h2 {
+    color: #004080;
+    font-size: 20px;
+    margin-bottom: 0px;
+}
+
+.text-and-image p {
+    color: #000;
+    font-size: 14px;
+}
+
+.modern-article.text-and-image {
+    background-image: url('./Imagenes/fondoArticleInicial.jpg'); /* Cambia por la ruta de tu imagen de fondo */
+    background-size: cover; /* Ajusta el tamaño de la imagen al fondo del artículo */
+    background-position: center; /* Centra la imagen horizontal y verticalmente */
+    background-color: transparent; /* Hace que el fondo blanco sea transparente para ver la imagen de fondo */
+}
+#footerInicial{
+    background-color: #FFA500;
+    padding: 5px; /* Ajusta el padding para hacer el pie de página más pequeño */
+    text-align: center;
+    margin-top: 20px;
+}
+/* Estilo para el main */
+
+
+
+#background-container {
+   
+    padding: 20px;
+}
+
+#main-title {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 36px;
+    color: #004080;
+    margin-top: 20px;
+}
+
+#main-pagina3 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilo para los articles */
+.modern-article-B {
+   
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+
+.modern-article-B:hover {
+    transform: scale(1.05);
+}
+
+.modern-article-B h2 {
+    color: #004080;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.modern-article-B img {
+    max-width: 100%;
+    height: auto;
+    
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    height: 400px; /* Establece la altura deseada para todas las imágenes */
+    object-fit: cover; /* Mantiene la proporción y corta la imagen si es necesario */
+    border-radius: 10px; /* Añade esquinas redondeadas */
+
+
+    
+}
+
+.modern-article-B p {
+    color: #000;
+    font-size: 14px;
+}
+
+.modern-article-B.text-and-image{
+
+    background-image: url('./Imagenes/fondoArticleIPrimaria.jpg'); /* Cambia por la ruta de tu imagen de fondo */
+    background-size: cover; /* Ajusta el tamaño de la imagen al fondo del artículo */
+    background-position: center; /* Centra la imagen horizontal y verticalmente */
+    background-color: transparent; /* Hace que el fondo blanco sea transparente para ver la imagen de fondo */
+}
+
+
+
+
+
+.banner-images img {
+    max-width: 400px; /* Ajusta el tamaño máximo según tus preferencias */
+    width: 100%; /* Garantiza que las imágenes no superen el tamaño máximo */
+    height: auto; /* Mantiene la proporción original de las imágenes */
+    margin: 0 auto; /* Centra las imágenes horizontalmente */
+    display: block; /* Elimina el espacio adicional debajo de las imágenes */
+}
+
+
+
+
+/* Estilo de cada imagen */
+#banner-container-basica img {
+    width: 81%; /* Asegura que las imágenes ocupen todo el ancho del contenedor */
+    height: 400px; /* Establece la altura deseada para todas las imágenes */
+    object-fit: cover; /* Mantiene la proporción y corta la imagen si es necesario */
+    border-radius: 10px; /* Añade esquinas redondeadas */
+    transition: opacity 0.3s ease-in-out; /* Añade transición para suavizar el cambio de imágenes */
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+/* Estilo para los artículos */
+.modern-article-basica {
+    background-image: url('./Imagenes/texturaBasicaSuperior.jpg'); /* Cambia por la ruta de tu imagen de fondo */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+    margin-bottom: 20px; /* Agrega un margen inferior para separar verticalmente */
+    margin-right: 30px;
+}
+
+.modern-article-basica:hover {
+    transform: scale(1.1); /* Cambia la escala al pasar el ratón por encima */
+}
+
+.modern-article-basica h2 {
+    color: #030609;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.modern-article-basica img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    height: 300px; /* Establece la altura deseada para todas las imágenes */
+    object-fit: cover; /* Mantiene la proporción y corta la imagen si es necesario */
+    border-radius: 10px; /* Añade esquinas redondeadas */
+
+}
+
+.modern-article-basica p {
+    color: #000;
+    font-size: 14px;
+}
+
+/* Estilo específico para la primera fila (títulos, imágenes y texto) */
+#main-basica-superior-basica {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.slick-prev, .slick-next {
+    font-size: 24px; /* Tamaño del ícono de flecha */
+    color: #004080; /* Color de las flechas */
+    background: transparent; /* Fondo transparente */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+    position: absolute; /* Posición absoluta en relación con el contenedor del carrusel */
+    top: 50%; /* Coloca las flechas en el centro vertical */
+    transform: translateY(-50%); /* Ajusta la posición vertical en relación con el tamaño de las flechas */
+}
+
+.slick-prev {
+    left: 10px; /* Posiciona la flecha izquierda a 10px del borde izquierdo */
+}
+
+.slick-next {
+    right: 10px; /* Posiciona la flecha derecha a 10px del borde derecho */
+}
+
+nav {
+    z-index: 1000; /* Ajusta este valor según sea necesario */
+}
+header {
+    position: relative;
+    z-index: 2; /* Ajusta según sea necesario */
+}
+
+/* Estilo del carrusel */
+.slick-carousel {
+    position: relative;
+    z-index: 1; /* Ajusta según sea necesario */
+}
+
+
+
+/* Estilo específico para los articles de la página de Bachillerato */
+.modern-article-bachillerato {
+    background-image: url('./Imagenes/fondoBachillerato.jpg'); /* Cambia por la ruta de tu imagen de fondo */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+    margin-bottom: 20px; /* Agrega un margen inferior para separar verticalmente */
+    margin-left: 20px;
+}
+
+.modern-article-bachillerato:hover {
+    transform: scale(1.1); /* Cambia la escala al pasar el ratón por encima */
+}
+
+.modern-article-bachillerato h2 {
+    color: #004080;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.modern-article-bachillerato img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    height: 300px; /* Establece la altura deseada para todas las imágenes */
+    object-fit: cover; /* Mantiene la proporción y corta la imagen si es necesario */
+    border-radius: 10px; /* Añade esquinas redondeadas */
+}
+
+.modern-article-bachillerato p {
+    color: #000;
+    font-size: 14px;
+}
+
+/* Estilo específico para el contenedor principal */
+#main-bachillerato {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+}
+
+#contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#contact-form input,
+#contact-form select,
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#contact-form textarea {
+    resize: vertical; /* Permite redimensionar verticalmente solo */
+}
+
+#contact-form button {
+    background-color: #004080;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#contact-form button:hover {
+    background-color: #00214d;
+}
+
+
+
+
+
+/* Estilo para el contenedor principal */
+#main-eventos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Espacio entre secciones */
+    margin-left: 90px;
+    
+}
+
+/* Estilo para centrar el título */
+.centered {
+    text-align: center;
+}
+.centered h2 {
+    color: #004080;
+    font-weight: bold; /* Añade negrilla */
+    font-size:200%;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    
+    
+}
+
+/* Estilo para cada sección de eventos */
+.event-section {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los artículos se envuelvan a la siguiente línea si no hay espacio suficiente */
+    justify-content: center; /* Centra los artículos horizontalmente */
+    gap: 20px; /* Espacio entre artículos */
+}
+
+/* Estilo para los artículos de eventos */
+.event-article {
+    flex: 1;
+    max-width: 500px; /* Ajusta el ancho máximo de los artículos según sea necesario */
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+/* Estilo para las imágenes de eventos */
+.event-article img {
+    width: 500px; /* La imagen ocupa el 100% del ancho del artículo */
+    height: 400px; /* Mantiene la proporción original de la imagen */
+    border-radius: 10px; /* Añade esquinas redondeadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra ligera alrededor de la imagen */
+    transition: transform 0.3s ease-in-out; /* Efecto de transición suave */
+    object-fit: cover; /* Mantiene la proporción y corta la imagen si es necesario */
+}
+
+/* Efecto de escala al pasar el ratón sobre la imagen */
+.event-article img:hover {
+    transform: scale(1.1);
+}
+
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px; /* Ajusta según sea necesario */
+    margin-bottom: 5px;
+    background-color: #004080;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #002040; /* Color al pasar el ratón */
+}
+
+
+
+
+
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #004080;
+    padding-top: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar a:hover {
+    background-color: #002040;
+}
+
+.content {
+    margin-left: 220px; /* Ajusta según el ancho de la barra lateral */
+    padding: 20px;
+}
+
+.centered {
+    text-align: center;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #004080;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #002040;
+}
+
+.event-section {
+    margin-top: 40px;
+}
+
+.event-section h3 {
+    color: #004080;
+}
+
+
+
+
+/* transporte */
+
+
+.transport-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.transport-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.main-image {
+    width: 100%;
+    transition: filter 0.5s ease; /* Transición de suavizado */
+}
+
+.articles-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0; /* Inicialmente invisible */
+    transition: opacity 0.5s ease; /* Transición de opacidad */
+   
+}
+
+.transport-article {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo semi-transparente */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.transport-article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    opacity: 1; /* Ajusta el valor de opacidad según sea necesario */
+}
+
+
+.transport-article p {
+    text-align: justify;
+    max-width: 430px; /* Establece el ancho máximo según tus necesidades */
+    margin-left: 10px; /* Ajusta el valor según sea necesario */
+    word-wrap: break-word;
+}
+
+.transport-image:hover .main-image {
+    filter: brightness(0.7); /* Suavizado al pasar el cursor */
+}
+
+.transport-image:hover .articles-container {
+    opacity: 1; /* Hacer visible al pasar el cursor */
+}
+
+.transport-article h3 {
+    color: #0000FF; /* Cambia el valor al código de color azul que prefieras para el título */
+}
+
+
+
+
+/* Clubs */
+
+.clubs-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.club {
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.club:hover {
+    transform: scale(1.1);
+}
+
+.club img {
+    
+    border-radius: 10px;
+
+    width: 300px; /* La imagen ocupa el 100% del ancho del artículo */
+    height: 400px; /* Mantiene la proporción original de la imagen */
+    border-radius: 10px; /* Añade esquinas redondeadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra ligera alrededor de la imagen */
+    transition: transform 0.3s ease-in-out; /* Efecto de transición suave */
+    object-fit: cover; /* Mantiene la proporción y corta la imagen si es necesario */
+
+
+}
+
+
+
+
+
+.club-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff; /* Color del título */
+    opacity: 0.8; /* Ajusta la opacidad según sea necesario */
+    transition: opacity 0.3s ease; /* Agrega una transición para suavizar los cambios de opacidad */
+}
+
+.club:hover .club-title {
+    opacity: 1; /* Hace que el título sea completamente visible al pasar el cursor sobre la imagen */
+}
+
+.clubs-section {
+    display: flex;
+}
+
+.club {
+    position: relative;
+    overflow: hidden;
+}
+
+.club img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: opacity 0.3s ease, transform 0.3s ease-in-out;
+    width: 300px; /* La imagen ocupa el 100% del ancho del artículo */
+    height: 400px; /* Mantiene la proporción original de la imagen */
+    border-radius: 10px; /* Añade esquinas redondeadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra ligera alrededor de la imagen */
+    transition: transform 0.3s ease-in-out; /* Efecto de transición suave */
+    object-fit: cover; /* Mantiene la proporción y corta la imagen si es necesario */
+}
+
+.club h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    text-align: center;
+    background-color: #fff9f9;
+    color: #0d00ff; /* Color del texto */
+    opacity: 0; /* Inicialmente, el título es transparente */
+    transition: opacity 0.3s ease;
+}
+
+.club:hover img {
+    opacity: 0.7; /* Cambia la opacidad de la imagen al pasar el cursor */
+}
+
+.club:hover h2 {
+    opacity: 1; /* Hace visible el título al pasar el cursor */
+}
+
+
+
+.article-sectionC {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    margin-top: 100px;
+   
+    
+}
+
+.article-sectionC article {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-image: url('./Imagenes/fondoarti.webp'); /* Cambia por la ruta de tu imagen de fondo */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+.article-sectionC article h2 {
+    color: #004080; /* Color del título */
+}
+
+.article-sectionC  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    width: 800px; /* La imagen ocupa todo el ancho del contenedor */
+    height: 300px; /* Establece la altura deseada para todas las imágenes */
+    object-fit: cover; /* Mantiene la proporción y corta la imagen si es necesario */
+    border-radius: 10px; /* Añade esquinas redondeadas */
+}
+
+.article-sectionC article p {
+    color: #333; /* Color del texto */
+    text-align: justify;
+    max-width: 800px; /* Establece el ancho máximo según tus necesidades */
+    margin-left: 10px; /* Ajusta el valor según sea necesario */
+    word-wrap: break-word;
+    margin-top: 30px;
+    font-size: 20px;
+    
+
+}
+
+
+
+
+
+.article-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 80px;
+    margin-bottom: 60px;
+   
+}
+.article-container {
+    display: flex;
+    gap: 80px;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.centered-article,
+.horizontal-images-article {
+    width: 550px; /* Ancho fijo para ambos tipos de artículo */
+    height: 600px; /* Altura fija para ambos tipos de artículo */
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.centered-article img,
+.horizontal-images-article img {
+    width: 100%; /* La imagen ocupa todo el ancho del artículo */
+    height: 100%; /* La imagen ocupa todo el alto del artículo */
+   
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.centered-article:hover img,
+.horizontal-images-article:hover img {
+    opacity: 0.7;
+}
+
+.centered-article:hover .overlay,
+.horizontal-images-article:hover .overlay {
+    opacity: 1;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.overlay h2 {
+    margin: 0;
+    color: #10098bbd; /* Color de texto negro */
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.centered-article a,
+.horizontal-images-article a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+
+.centered-article a:hover,
+.horizontal-images-article a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.quienes-somos-article p{
+
+    color: #333; /* Color del texto */
+    text-align: justify;
+    
+    margin-left: 20px; /* Ajusta el valor según sea necesario */
+    margin-right: 50px;
+    word-wrap: break-word;
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.modern-article.text-and-image p{
+
+    color: #333; /* Color del texto */
+    text-align: justify;
+    
+   
+    word-wrap: break-word;
+    margin-top: 30px;
+    font-size: 18px;
+}
+.modern-article-B.text-and-image p {
+
+    color: #333; /* Color del texto */
+   
+    text-align: justify;
+    
+    word-wrap: break-word;
+    
+    font-size: 17px;
+    margin-left: 20px;
+    margin-right: 30px;
+}
+
+.modern-article-basica p{
+
+    color: #333; /* Color del texto */
+   
+    text-align: justify;
+    
+    word-wrap: break-word;
+    
+    font-size: 17px;
+    margin-left: 20px;
+    margin-right: 30px;
+}
+
+.modern-article-bachillerato p{
+
+    color: #333; /* Color del texto */
+   
+    text-align: justify;
+    
+    word-wrap: break-word;
+    
+    font-size: 17px;
+    margin-left: 20px;
+    margin-right: 30px;
+}
+
+.modern-article-bachillerato h2{
+
+    
+    font-size: px;
+    
+}
+
+.seccion-adicional {
+    
+    padding: 20px; /* Espacio interno */
+}
+
+.seccion-adicional article {
+    margin-bottom: 70px; /* Espacio entre artículos */
+    padding: 20px; /* Espacio interno */
+    background-color: white; /* Color de fondo para cada artículo */
+    margin-top: 80px;
+    background-image: url('./Imagenes/texturaBasicaSuperior.jpg'); /* Cambia por la ruta de tu imagen de fondo */
+
+}
+
+.seccion-adicional article h2 {
+    text-align: center;
+}
+
+.seccion-adicional article .imagenes {
+    display: flex;
+    justify-content: space-between; /* Espacio igual entre las imágenes */
+}
+
+.seccion-adicional article .imagenes img {
+    width: 30%; /* Ancho de cada imagen */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+/* ===== Home redesign: sophisticated look scoped to index ===== */
+.home-page {
+    background: radial-gradient(circle at 20% 10%, rgba(209, 155, 64, 0.22), transparent 38%),
+                linear-gradient(145deg, #f4efe4 0%, #f6f8fb 45%, #e9eef6 100%);
+    color: #20242e;
+    font-family: "Manrope", sans-serif;
+}
+
+.home-page header {
+    position: sticky;
+    top: 0;
+    z-index: 1100;
+    background: rgba(22, 28, 44, 0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    margin-bottom: 0;
+}
+
+.home-page #logo {
+    max-width: 92px;
+}
+
+.home-page #slogan {
+    margin: 8px 0 4px;
+    color: #ffffff;
+    font-size: clamp(1.7rem, 2.6vw, 2.4rem);
+    letter-spacing: 0.04em;
+    font-family: "Playfair Display", serif;
+}
+
+.home-page #subSlogan {
+    margin: 0;
+    color: #f2cf8f;
+    font-size: 1.05rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-family: "Manrope", sans-serif;
+}
+
+.home-page nav {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.home-page nav a {
+    color: #eff3fb;
+    font-size: 0.98rem;
+    font-weight: 600;
+    border-radius: 999px;
+    padding: 10px 16px;
+}
+
+.home-page nav a:hover {
+    background: #f2cf8f;
+    color: #1d2232;
+    transform: translateY(-1px);
+}
+
+.home-page .dropdown-content {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.home-page .dropdown-content a {
+    color: #1d2232;
+}
+
+.home-page .home-carousel-shell {
+    margin: 24px auto 26px;
+    width: min(1160px, 94%);
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 24px 60px rgba(19, 30, 48, 0.23);
+}
+
+.home-page #banner-container-basica img {
+    width: 100%;
+    height: clamp(260px, 52vw, 540px);
+    border-radius: 0;
+    margin: 0;
+}
+
+.home-page .slick-dots li button:before {
+    color: #ffffff;
+    opacity: 0.75;
+}
+
+.home-page .slick-dots li.slick-active button:before {
+    color: #f2cf8f;
+}
+
+.home-page .slick-prev,
+.home-page .slick-next {
+    z-index: 3;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(15, 20, 32, 0.66);
+    color: transparent;
+}
+
+.home-page .home-highlight {
+    width: min(1160px, 94%);
+    margin: 0 auto 56px;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 24px;
+    align-items: stretch;
+}
+
+.home-page .home-highlight-content {
+    border-radius: 20px;
+    padding: clamp(24px, 4vw, 44px);
+    background: linear-gradient(170deg, #161c2c 0%, #283758 100%);
+    box-shadow: 0 22px 42px rgba(18, 26, 42, 0.28);
+}
+
+.home-page .home-highlight h1 {
+    margin: 0 0 16px;
+    color: #ffffff;
+    font-size: clamp(1.7rem, 3.1vw, 2.8rem);
+    line-height: 1.15;
+    font-family: "Playfair Display", serif;
+}
+
+.home-page .home-highlight p {
+    color: #dee5f4;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    margin-bottom: 24px;
+}
+
+.home-page .home-cta {
+    display: inline-block;
+    text-decoration: none;
+    background: #f2cf8f;
+    color: #1a2030;
+    padding: 12px 22px;
+    border-radius: 999px;
+    font-weight: 700;
+}
+
+.home-page .home-highlight-image {
+    border-radius: 20px;
+    overflow: hidden;
+    min-height: 280px;
+    box-shadow: 0 20px 44px rgba(18, 26, 42, 0.22);
+}
+
+.home-page .home-highlight-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.home-page #quienes-somos {
+    padding: 10px 20px 55px;
+}
+
+.home-page .quienes-somos-article {
+    border: 0;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(3px);
+    box-shadow: 0 16px 34px rgba(20, 29, 44, 0.12);
+}
+
+.home-page .quienes-somos-article:hover {
+    transform: translateY(-4px);
+}
+
+.home-page .quienes-somos-article h2 {
+    color: #17223a;
+    font-family: "Playfair Display", serif;
+    font-size: 1.8rem;
+}
+
+.home-page .quienes-somos-article p {
+    color: #273248;
+    line-height: 1.75;
+}
+
+.home-page footer {
+    background: #111827;
+    color: #dce5f8;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.home-page .redes-sociales:hover,
+.home-page .ubicacion:hover,
+.home-page .contacto:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.home-page .redes-sociales a,
+.home-page .ubicacion a,
+.home-page .contacto a {
+    color: #f4d9a2;
+}
+
+@media (max-width: 980px) {
+    .home-page .home-highlight {
+        grid-template-columns: 1fr;
+    }
+
+    .home-page .quienes-somos-article {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .home-page .quienes-somos-article .column {
+        width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .home-page nav a {
+        font-size: 0.9rem;
+        padding: 9px 12px;
+    }
+
+    .home-page #quienes-somos {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+
+/* ===== Global sophisticated theme for all pages ===== */
+:root {
+    --bg-soft: linear-gradient(145deg, #f4efe4 0%, #f6f8fb 45%, #e9eef6 100%);
+    --ink: #1f2736;
+    --muted: #5a667d;
+    --brand-dark: #161c2c;
+    --brand-mid: #243251;
+    --brand-gold: #f2cf8f;
+    --card: rgba(255, 255, 255, 0.88);
+}
+
+body {
+    background: var(--bg-soft);
+    color: var(--ink);
+    font-family: "Manrope", sans-serif;
+}
+
+header {
+    position: static;
+    z-index: auto;
+    background: linear-gradient(160deg, var(--brand-dark) 0%, var(--brand-mid) 100%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    margin-bottom: 22px;
+}
+
+.home-page header {
+    position: static;
+    top: auto;
+}
+
+#slogan {
+    color: #ffffff;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(1.7rem, 2.9vw, 2.45rem);
+    margin: 8px 0 6px;
+}
+
+#subSlogan {
+    color: var(--brand-gold);
+    font-family: "Manrope", sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+nav {
+    margin-top: 14px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+nav a,
+#noticias,
+#contacto {
+    background: transparent;
+    color: #ecf1ff;
+    border-radius: 999px;
+    padding: 10px 16px;
+    font-size: 0.98rem;
+    font-weight: 600;
+}
+
+nav a:hover,
+#noticias:hover,
+#contacto:hover {
+    background: var(--brand-gold);
+    color: #1a2233;
+    transform: translateY(-1px);
+}
+
+.dropdown-content {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--brand-gold);
+    color: #1a2233;
+    transform: none;
+}
+
+footer {
+    background: #111827;
+    color: #dde5f8;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.redes-sociales:hover,
+.ubicacion:hover,
+.contacto:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.redes-sociales a,
+.ubicacion a,
+.contacto a {
+    color: var(--brand-gold);
+}
+
+/* Cards / sections across pages */
+.quienes-somos-article,
+.modern-article,
+.modern-article-B,
+.modern-article-basica,
+.modern-article-bachillerato,
+.text-and-image,
+.article-sectionC article,
+.seccion-adicional article {
+    background-image: none;
+    background-color: var(--card);
+    border: 0;
+    box-shadow: 0 16px 34px rgba(20, 29, 44, 0.12);
+    border-radius: 16px;
+}
+
+.quienes-somos-article h2,
+.modern-article h2,
+.modern-article-B h2,
+.modern-article-basica h2,
+.modern-article-bachillerato h2,
+.article-sectionC article h2 {
+    color: #16233b;
+    font-family: "Playfair Display", serif;
+}
+
+.quienes-somos-article p,
+.modern-article p,
+.modern-article-B p,
+.modern-article-basica p,
+.modern-article-bachillerato p,
+.article-sectionC article p {
+    color: #28344a;
+}
+
+/* Carousel and large images: show complete image */
+#banner-container-basica img,
+.banner-images img,
+.event-article img,
+.club img,
+.article-sectionC img,
+.modern-article img,
+.modern-article-B img,
+.modern-article-basica img,
+.modern-article-bachillerato img {
+    object-fit: contain;
+    background: #0f172a;
+}
+
+#banner-container-basica img {
+    width: min(1100px, 96%);
+    height: clamp(220px, 42vw, 420px);
+    margin: 0 auto 20px;
+}
+
+.slick-prev,
+.slick-next {
+    background: rgba(15, 20, 32, 0.65);
+    border-radius: 999px;
+    width: 42px;
+    height: 42px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: #ffffff;
+}
+
+@media (max-width: 900px) {
+    .quienes-somos-article {
+        flex-direction: column;
+    }
+
+    #main-pagina2,
+    #main-pagina3,
+    #main-basica-superior-basica,
+    #main-bachillerato {
+        grid-template-columns: 1fr;
+    }
+
+    .clubs-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .event-article img {
+        width: 100%;
+        height: auto;
+        max-height: 360px;
+    }
+}
+
+/* ===== Final luxury polish across all pages ===== */
+#background-container,
+main {
+    width: min(1220px, 96%);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#main-title {
+    margin: 26px auto 22px;
+    color: #16233b;
+    font-size: clamp(1.7rem, 3vw, 2.7rem);
+    letter-spacing: 0.03em;
+    font-family: "Playfair Display", serif;
+}
+
+#main-pagina2 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 26px;
+    padding: 18px 8px 38px;
+}
+
+#main-pagina3,
+#main-basica-superior-basica,
+#main-bachillerato {
+    gap: 24px;
+    padding: 10px 8px 34px;
+    width: min(1220px, 96%);
+}
+
+.modern-article,
+.modern-article-B,
+.modern-article-basica,
+.modern-article-bachillerato,
+.article-sectionC article,
+.seccion-adicional article {
+    transition: transform 0.26s ease, box-shadow 0.26s ease;
+}
+
+.modern-article:hover,
+.modern-article-B:hover,
+.modern-article-basica:hover,
+.modern-article-bachillerato:hover,
+.article-sectionC article:hover,
+.seccion-adicional article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 22px 46px rgba(18, 30, 48, 0.18);
+}
+
+.modern-article p,
+.modern-article-B p,
+.modern-article-basica p,
+.modern-article-bachillerato p,
+.article-sectionC article p,
+.transport-article p {
+    font-size: 1rem;
+    line-height: 1.78;
+}
+
+.modern-article img,
+.modern-article-B img,
+.modern-article-basica img,
+.modern-article-bachillerato img {
+    border-radius: 12px;
+    width: 100%;
+    max-height: 330px;
+}
+
+.article-container,
+.clubs-section,
+.article-sectionC,
+.seccion-adicional {
+    width: min(1220px, 96%);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.clubs-section {
+    gap: 24px;
+    padding: 14px 0 6px;
+}
+
+.club {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 16px 30px rgba(16, 28, 46, 0.16);
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.club h2 {
+    border-radius: 10px;
+    padding: 10px 12px;
+    background: rgba(242, 207, 143, 0.9);
+    color: #14213a;
+    font-family: "Playfair Display", serif;
+    letter-spacing: 0.04em;
+}
+
+.article-sectionC {
+    margin-top: 40px;
+}
+
+.article-sectionC article {
+    max-width: 980px;
+}
+
+.article-sectionC img {
+    width: 100%;
+    max-width: 920px;
+    height: clamp(240px, 40vw, 420px);
+}
+
+.seccion-adicional article .imagenes {
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.seccion-adicional article .imagenes img {
+    width: calc(33.333% - 8px);
+    min-width: 230px;
+    height: clamp(180px, 26vw, 280px);
+    object-fit: cover;
+    box-shadow: 0 10px 20px rgba(20, 30, 45, 0.14);
+}
+
+#main-eventos {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    padding: 14px 8px 34px 260px;
+    align-items: stretch;
+    gap: 26px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 26px;
+    left: 18px;
+    width: 220px;
+    height: auto;
+    max-height: calc(100vh - 40px);
+    overflow: auto;
+    background: linear-gradient(170deg, #121a2a 0%, #253553 100%);
+    border-radius: 14px;
+    box-shadow: 0 18px 34px rgba(12, 22, 38, 0.3);
+}
+
+.sidebar a {
+    color: #e9eef9;
+    font-size: 0.88rem;
+}
+
+.sidebar a:hover {
+    background-color: rgba(242, 207, 143, 0.95);
+    color: #18233b;
+}
+
+.centered h2 {
+    color: #16233b;
+    font-family: "Playfair Display", serif;
+}
+
+.event-section {
+    gap: 18px;
+}
+
+.event-article {
+    max-width: 540px;
+    margin-right: 0;
+    margin-bottom: 8px;
+}
+
+.event-article img {
+    width: 100%;
+    height: clamp(240px, 30vw, 340px);
+    border-radius: 14px;
+    background: #0f172a;
+}
+
+.back-button {
+    background: linear-gradient(135deg, #1b2a45, #2f446d);
+    border-radius: 999px;
+    padding: 10px 18px;
+}
+
+.back-button:hover {
+    background: linear-gradient(135deg, #23385c, #3c568a);
+}
+
+.transport-container {
+    margin-top: 6px;
+}
+
+.transport-image {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 38px rgba(16, 28, 46, 0.2);
+}
+
+.main-image {
+    width: 100%;
+    max-height: 640px;
+    object-fit: cover;
+}
+
+.transport-article {
+    border-radius: 14px;
+    background-color: rgba(255, 255, 255, 0.82);
+    box-shadow: 0 10px 20px rgba(13, 22, 36, 0.17);
+}
+
+.transport-article h3 {
+    color: #16233b;
+    font-family: "Playfair Display", serif;
+}
+
+@media (max-width: 1150px) {
+    #main-eventos {
+        padding-left: 8px;
+    }
+
+    .sidebar {
+        position: static;
+        width: min(1200px, 96%);
+        margin: 0 auto 18px;
+        max-height: none;
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .sidebar li {
+        margin-bottom: 0;
+    }
+}
+
+/* ===== Final override: institutional light palette + reliable dropdown ===== */
+:root {
+    --bg-soft: linear-gradient(150deg, #f9f4ea 0%, #f3f7fd 52%, #e8f0fa 100%);
+    --brand-dark: #1f4e79;
+    --brand-mid: #2e6aa1;
+    --brand-gold: #f4c96a;
+    --card: rgba(255, 255, 255, 0.92);
+}
+
+header,
+.home-page header {
+    background: linear-gradient(140deg, #f6c36f 0%, #f1b455 35%, #e8a647 100%);
+    border-bottom: 1px solid rgba(31, 78, 121, 0.22);
+    position: relative;
+    z-index: 5000;
+}
+
+#slogan {
+    color: #173a5b;
+}
+
+#subSlogan {
+    color: #245886;
+}
+
+nav {
+    position: relative;
+    z-index: 5100;
+    overflow: visible;
+}
+
+nav a,
+#noticias,
+#contacto {
+    color: #173a5b;
+    background: rgba(255, 255, 255, 0.55);
+}
+
+nav a:hover,
+#noticias:hover,
+#contacto:hover {
+    color: #113457;
+    background: #fff7e7;
+}
+
+.dropdown {
+    position: relative;
+    z-index: 5200;
+    padding-bottom: 10px;
+    margin-bottom: -10px;
+}
+
+.dropdown-content {
+    min-width: 240px;
+    margin-top: 6px;
+    border: 1px solid rgba(31, 78, 121, 0.2);
+    box-shadow: 0 18px 34px rgba(16, 35, 58, 0.18);
+    z-index: 5300;
+}
+
+#banner-container-basica,
+.slick-carousel,
+.slick-list,
+.slick-track {
+    z-index: 1 !important;
+}
+
+.dropdown-content li {
+    list-style: none;
+}
+
+.dropdown-content a {
+    color: #1a3f64;
+    font-weight: 600;
+    background: #ffffff;
+}
+
+.dropdown-content a:hover {
+    background: #fff3d8;
+    color: #123457;
+}
+
+.home-page .home-highlight-content {
+    background: linear-gradient(165deg, #2b6598 0%, #3c7bb2 100%);
+}
+
+footer {
+    background: linear-gradient(150deg, #1f4e79 0%, #245886 100%);
+}
+
+.back-button {
+    background: linear-gradient(135deg, #2a679c, #3e80ba);
+}
+
+.back-button:hover {
+    background: linear-gradient(135deg, #255d90, #356fa6);
+}
+
+/* ===== Fix final: elegant nav + dropdown visual ===== */
+nav a,
+#eventos,
+#uniformes,
+#noticias,
+#contacto {
+    color: #1f3f63 !important;
+    background: rgba(255, 245, 225, 0.72) !important;
+    border: 1px solid rgba(31, 78, 121, 0.18);
+    box-shadow: 0 6px 14px rgba(30, 55, 84, 0.08);
+}
+
+nav a:hover,
+#eventos:hover,
+#uniformes:hover,
+#noticias:hover,
+#contacto:hover {
+    color: #173754 !important;
+    background: #fff8ea !important;
+}
+
+.dropdown-content {
+    background: #fffaf0 !important;
+    border-radius: 14px !important;
+    border: 1px solid rgba(39, 78, 114, 0.2) !important;
+    padding: 8px 0;
+    margin-top: 0 !important;
+    top: calc(100% - 1px);
+}
+
+.dropdown-content li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.dropdown-content a {
+    display: block;
+    margin: 0 8px;
+    border-radius: 10px;
+    padding: 12px 16px !important;
+    background: transparent !important;
+    color: #1f3f63 !important;
+    font-weight: 700;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background: #f6e8c8 !important;
+    color: #12314e !important;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    display: block;
+}
+
+/* Uniformes: show full photos without crop */
+.uniformes-page .seccion-adicional article .imagenes {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    align-items: stretch;
+}
+
+.uniformes-page .seccion-adicional article .imagenes img {
+    object-fit: contain !important;
+    background: #f3f5f8;
+    width: 100%;
+    height: clamp(260px, 28vw, 420px);
+    padding: 6px;
+    border-radius: 12px;
+}
+
+@media (max-width: 980px) {
+    .uniformes-page .seccion-adicional article .imagenes {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== Institutional Elegant Polish (safe visual-only overrides) ===== */
+:root {
+    --inst-blue-900: #123a5d;
+    --inst-blue-700: #255a85;
+    --inst-gold-500: #e8ad4e;
+    --inst-cream-100: #fff8ea;
+    --inst-surface: rgba(255, 255, 255, 0.94);
+    --inst-shadow: 0 16px 36px rgba(18, 50, 82, 0.14);
+}
+
+body {
+    background: radial-gradient(circle at 20% 0%, rgba(232, 173, 78, 0.18), transparent 35%),
+                linear-gradient(150deg, #fbf6ec 0%, #f5f8fc 55%, #edf3fb 100%);
+    color: #1f3148;
+}
+
+header,
+.home-page header {
+    box-shadow: 0 12px 26px rgba(24, 61, 96, 0.14);
+}
+
+#logo {
+    filter: drop-shadow(0 6px 10px rgba(20, 45, 74, 0.2));
+}
+
+#slogan {
+    letter-spacing: 0.02em;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.28);
+}
+
+#subSlogan {
+    letter-spacing: 0.14em;
+}
+
+nav a,
+#eventos,
+#uniformes,
+#noticias,
+#contacto {
+    border-radius: 999px;
+    backdrop-filter: blur(2px);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+nav a:hover,
+#eventos:hover,
+#uniformes:hover,
+#noticias:hover,
+#contacto:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 18px rgba(25, 60, 94, 0.16);
+}
+
+.dropdown-content {
+    backdrop-filter: blur(4px);
+}
+
+.dropdown-content a {
+    letter-spacing: 0.01em;
+}
+
+#main-title {
+    color: var(--inst-blue-900);
+    text-wrap: balance;
+}
+
+.quienes-somos-article,
+.modern-article,
+.modern-article-B,
+.modern-article-basica,
+.modern-article-bachillerato,
+.article-sectionC article,
+.seccion-adicional article,
+.transport-article {
+    background: var(--inst-surface);
+    box-shadow: var(--inst-shadow);
+    border: 1px solid rgba(18, 58, 93, 0.08);
+}
+
+.quienes-somos-article h2,
+.modern-article h2,
+.modern-article-B h2,
+.modern-article-basica h2,
+.modern-article-bachillerato h2,
+.article-sectionC article h2,
+.transport-article h3 {
+    color: var(--inst-blue-900);
+    letter-spacing: 0.01em;
+}
+
+.quienes-somos-article p,
+.modern-article p,
+.modern-article-B p,
+.modern-article-basica p,
+.modern-article-bachillerato p,
+.article-sectionC article p,
+.transport-article p {
+    color: #283d57;
+    line-height: 1.72;
+}
+
+.home-page .home-cta,
+.back-button {
+    border: 1px solid rgba(255, 255, 255, 0.26);
+    box-shadow: 0 10px 20px rgba(20, 47, 76, 0.22);
+}
+
+.home-page .home-cta:hover,
+.back-button:hover {
+    transform: translateY(-1px);
+}
+
+.slick-dots li button:before {
+    color: #d9a24b !important;
+    opacity: 0.85;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #1f4e79 !important;
+    opacity: 1;
+}
+
+footer {
+    box-shadow: 0 -6px 24px rgba(19, 53, 86, 0.15);
+}
+
+/* ===== Variant: Modern Premium ===== */
+:root {
+    --mp-bg-a: #f8f3e8;
+    --mp-bg-b: #edf4fc;
+    --mp-blue-deep: #0f3557;
+    --mp-blue-soft: #2f6698;
+    --mp-gold: #e7aa45;
+    --mp-ivory: #fffaf1;
+    --mp-card: rgba(255, 255, 255, 0.96);
+}
+
+body {
+    background:
+        radial-gradient(1200px 500px at -10% -10%, rgba(231, 170, 69, 0.2), transparent 60%),
+        radial-gradient(900px 420px at 110% 0%, rgba(47, 102, 152, 0.14), transparent 60%),
+        linear-gradient(160deg, var(--mp-bg-a) 0%, var(--mp-bg-b) 100%);
+}
+
+header,
+.home-page header {
+    background: linear-gradient(135deg, #f3bf67 0%, #e9ab46 55%, #dd9834 100%);
+    border-bottom: 1px solid rgba(15, 53, 87, 0.2);
+    box-shadow: 0 14px 30px rgba(15, 53, 87, 0.16);
+}
+
+#slogan {
+    color: var(--mp-blue-deep);
+    font-weight: 800;
+}
+
+#subSlogan {
+    color: #1e4f7a;
+    opacity: 0.92;
+}
+
+nav a,
+#eventos,
+#uniformes,
+#noticias,
+#contacto {
+    background: rgba(255, 250, 241, 0.78) !important;
+    border: 1px solid rgba(15, 53, 87, 0.18);
+    color: var(--mp-blue-deep) !important;
+    box-shadow: 0 8px 18px rgba(21, 53, 85, 0.1);
+}
+
+nav a:hover,
+#eventos:hover,
+#uniformes:hover,
+#noticias:hover,
+#contacto:hover {
+    background: #fff6e5 !important;
+    color: #0d2f4e !important;
+    transform: translateY(-2px);
+}
+
+.dropdown-content {
+    background: var(--mp-ivory) !important;
+    border: 1px solid rgba(15, 53, 87, 0.18) !important;
+    box-shadow: 0 20px 36px rgba(15, 53, 87, 0.16);
+}
+
+.dropdown-content a {
+    color: var(--mp-blue-deep) !important;
+}
+
+.dropdown-content a:hover {
+    background: #f8e7c5 !important;
+    color: #0c2d4a !important;
+}
+
+.home-page .home-highlight-content {
+    background: linear-gradient(165deg, #1d4d78 0%, #2e6fa7 100%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.home-page .home-highlight h1 {
+    letter-spacing: 0.01em;
+}
+
+.quienes-somos-article,
+.modern-article,
+.modern-article-B,
+.modern-article-basica,
+.modern-article-bachillerato,
+.article-sectionC article,
+.seccion-adicional article,
+.transport-article {
+    background: var(--mp-card);
+    border: 1px solid rgba(15, 53, 87, 0.09);
+    box-shadow: 0 16px 34px rgba(17, 45, 74, 0.12);
+    border-radius: 18px;
+}
+
+.quienes-somos-article:hover,
+.modern-article:hover,
+.modern-article-B:hover,
+.modern-article-basica:hover,
+.modern-article-bachillerato:hover,
+.article-sectionC article:hover,
+.seccion-adicional article:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 44px rgba(17, 45, 74, 0.16);
+}
+
+#main-title,
+.quienes-somos-article h2,
+.modern-article h2,
+.modern-article-B h2,
+.modern-article-basica h2,
+.modern-article-bachillerato h2,
+.article-sectionC article h2,
+.transport-article h3 {
+    color: var(--mp-blue-deep);
+}
+
+.home-page .home-cta,
+.back-button {
+    background: linear-gradient(135deg, #1f5584, #2f6fa8);
+    color: #f4f9ff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.home-page .home-cta:hover,
+.back-button:hover {
+    background: linear-gradient(135deg, #1a4a74, #2a628f);
+}
+
+.slick-prev,
+.slick-next {
+    background: rgba(15, 53, 87, 0.72);
+}
+
+.slick-dots li button:before {
+    color: var(--mp-gold) !important;
+}
+
+.slick-dots li.slick-active button:before {
+    color: var(--mp-blue-deep) !important;
+}
+
+footer {
+    background: linear-gradient(140deg, #153f66 0%, #245a8b 100%);
+}
+
+/* ===== Interactions: modern premium behavior ===== */
+nav a.active-nav {
+    background: #fff3d7 !important;
+    border-color: rgba(15, 53, 87, 0.3);
+    box-shadow: 0 10px 20px rgba(19, 51, 82, 0.14);
+}
+
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(18px) scale(0.99);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.image-lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(9, 20, 36, 0.86);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 15000;
+    padding: 24px;
+}
+
+.image-lightbox.open {
+    display: flex;
+}
+
+.image-lightbox img {
+    max-width: min(1200px, 94vw);
+    max-height: 88vh;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+    background: #0d2239;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    width: 42px;
+    height: 42px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.14);
+    color: #ffffff;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+body.lightbox-open {
+    overflow: hidden;
+}
+
+main img {
+    cursor: zoom-in;
+}
+
+@media (max-width: 900px) {
+    .menu-toggle {
+        display: inline-flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        border: 1px solid rgba(15, 53, 87, 0.24);
+        background: rgba(255, 249, 238, 0.78);
+        margin: 10px auto 8px;
+        cursor: pointer;
+    }
+
+    .menu-toggle span {
+        width: 20px;
+        height: 2px;
+        background: #184468;
+        border-radius: 999px;
+        transition: transform 0.22s ease, opacity 0.22s ease;
+    }
+
+    .menu-toggle.is-open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .menu-toggle.is-open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.is-open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    header nav {
+        display: none;
+        width: min(440px, 92%);
+        margin: 0 auto 12px;
+        padding: 12px;
+        border-radius: 14px;
+        background: rgba(255, 251, 243, 0.96);
+        box-shadow: 0 16px 28px rgba(15, 53, 87, 0.16);
+        border: 1px solid rgba(22, 62, 96, 0.14);
+        gap: 10px;
+        overflow: visible;
+    }
+
+    header nav.nav-open {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav a,
+    #eventos,
+    #uniformes,
+    #noticias,
+    #contacto {
+        width: 100%;
+        text-align: left;
+        padding: 11px 14px;
+        font-size: 0.97rem;
+    }
+
+    .dropdown {
+        width: 100%;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    .dropdown-content {
+        position: static;
+        margin-top: 8px !important;
+        min-width: 100%;
+        box-shadow: none;
+        border-radius: 12px !important;
+    }
+
+    .dropdown-content a {
+        margin: 0 4px;
+    }
+
+    .dropdown.dropdown-open .dropdown-content {
+        display: block;
+    }
+}
+
+@media (min-width: 901px) {
+    .menu-toggle {
+        display: none;
+    }
+}
+
+/* Hero refinement */
+.home-page .home-highlight-content {
+    border-radius: 24px;
+    padding: clamp(28px, 4.3vw, 54px);
+    background:
+        radial-gradient(circle at 10% 12%, rgba(255, 255, 255, 0.14), transparent 38%),
+        linear-gradient(165deg, #1c4c77 0%, #2e6fa7 60%, #3a7fba 100%);
+}
+
+.home-page .home-highlight h1 {
+    font-size: clamp(2rem, 4vw, 4.2rem);
+    line-height: 1.02;
+    margin-bottom: 18px;
+    text-wrap: balance;
+}
+
+.home-page .home-highlight p {
+    max-width: 36ch;
+    font-size: clamp(1rem, 1.3vw, 1.28rem);
+    line-height: 1.6;
+}
+
+.home-page .home-cta {
+    border-radius: 999px;
+    padding: 14px 28px;
+    font-size: 1.03rem;
+    letter-spacing: 0.01em;
+}
+
+
+
