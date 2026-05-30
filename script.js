@@ -1,8 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
     setupLazyImages();
+    setupImageAccessibility();
+    setupExternalLinksA11y();
     setupActiveNav();
     setupMobileMenu();
     setupMobileDropdown();
+    setupKeyboardDropdown();
+    enforceCarouselSizing();
     setupRevealOnScroll();
     setupLightbox();
 });
@@ -14,12 +18,95 @@ function setupLazyImages() {
     });
 }
 
+function setupImageAccessibility() {
+    document.querySelectorAll("img").forEach(function (img) {
+        var alt = (img.getAttribute("alt") || "").trim();
+        if (!alt || /imagen|image/i.test(alt)) {
+            var src = img.getAttribute("src") || "";
+            var file = src.split("/").pop() || "imagen institucional";
+            var cleaned = file.replace(/\.[^.]+$/, "").replace(/[_-]+/g, " ").replace(/\s+/g, " ").trim();
+            if (!cleaned) cleaned = "imagen institucional de Patrick Elementary School";
+            img.setAttribute("alt", "Patrick Elementary School - " + cleaned);
+        }
+    });
+}
+
+function setupExternalLinksA11y() {
+    document.querySelectorAll("a[target=\"_blank\"]").forEach(function (a) {
+        if (!a.getAttribute("rel")) {
+            a.setAttribute("rel", "noopener noreferrer");
+        }
+        var label = a.getAttribute("aria-label");
+        if (!label) {
+            var txt = (a.textContent || "Enlace externo").trim();
+            a.setAttribute("aria-label", txt + " (abre en una nueva pestana)");
+        }
+    });
+}
+
 function setupActiveNav() {
     var current = window.location.pathname.split("/").pop() || "index.html";
     document.querySelectorAll("nav a[href]").forEach(function (link) {
         var href = link.getAttribute("href");
         if (!href || href.startsWith("#")) return;
         if (href === current) link.classList.add("active-nav");
+    });
+}
+
+function setupKeyboardDropdown() {
+    document.querySelectorAll(".dropdown > a").forEach(function (trigger) {
+        trigger.setAttribute("aria-haspopup", "true");
+        trigger.setAttribute("aria-expanded", "false");
+        trigger.addEventListener("focus", function () {
+            var parent = trigger.closest(".dropdown");
+            if (!parent) return;
+            parent.classList.add("dropdown-open");
+            trigger.setAttribute("aria-expanded", "true");
+        });
+    });
+
+    document.addEventListener("keydown", function (e) {
+        if (e.key !== "Escape") return;
+        document.querySelectorAll(".dropdown.dropdown-open").forEach(function (openMenu) {
+            openMenu.classList.remove("dropdown-open");
+            var trigger = openMenu.querySelector(":scope > a");
+            if (trigger) trigger.setAttribute("aria-expanded", "false");
+        });
+    });
+}
+
+function enforceCarouselSizing() {
+    function applyCarouselSize() {
+        var mobile = window.matchMedia("(max-width: 900px)").matches;
+        var h = mobile ? 220 : 360;
+
+        document.querySelectorAll("#banner-container-basica").forEach(function (container) {
+            container.style.setProperty("overflow", "hidden", "important");
+
+            container.querySelectorAll("img").forEach(function (img) {
+                img.style.setProperty("width", "100%", "important");
+                img.style.setProperty("height", "auto", "important");
+                img.style.setProperty("max-height", h + "px", "important");
+                img.style.setProperty("object-fit", "cover", "important");
+                img.style.setProperty("object-position", "center center", "important");
+                img.style.setProperty("display", "block", "important");
+                img.style.setProperty("margin", "0", "important");
+                img.style.setProperty("padding", "0", "important");
+            });
+        });
+    }
+
+    applyCarouselSize();
+    setTimeout(applyCarouselSize, 150);
+    setTimeout(applyCarouselSize, 600);
+    window.addEventListener("resize", applyCarouselSize);
+
+    // If Slick injects cloned slides later, keep size locked.
+    var observer = new MutationObserver(function () {
+        applyCarouselSize();
+    });
+    document.querySelectorAll("#banner-container-basica .slick-carousel").forEach(function (node) {
+        observer.observe(node, { childList: true, subtree: true });
     });
 }
 
